@@ -17,12 +17,12 @@ To use this package, add `gradient_round_paint` as a dependency in your `pubspec
 
 ```yaml
 dependencies:
-  gradient_round_paint: ^1.0.0
+  circular_gradient_spinner: ^1.0.0
 ```
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:gradient_round_paint/gradient_round_paint.dart';
+import 'package:circular_gradient_spinner/circular_gradient_spinner.dart';
 
 void main() {
   runApp(MyApp());
