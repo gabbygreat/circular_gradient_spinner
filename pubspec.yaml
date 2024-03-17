@@ -1,6 +1,6 @@
 name: circular_gradient_spinner
 description: "Add beautiful circular gradient spinner as loading indicators"
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/gabbygreat/circular_gradient_spinner.git
 
 environment:
