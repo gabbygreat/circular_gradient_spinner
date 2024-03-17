@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'enum.dart';
 import 'paint.dart';
 
 class CircularGradientSpinner extends StatefulWidget {
@@ -8,6 +9,8 @@ class CircularGradientSpinner extends StatefulWidget {
   final int gradientSteps;
   final double strokeWidth;
   final Color color;
+  final SpinnerDirection spinnerDirection;
+
   const CircularGradientSpinner({
     super.key,
     required this.color,
@@ -15,10 +18,12 @@ class CircularGradientSpinner extends StatefulWidget {
     this.duration,
     this.gradientSteps = 8,
     this.strokeWidth = 20,
+    this.spinnerDirection = SpinnerDirection.antiClockwise,
   });
 
   @override
-  State<CircularGradientSpinner> createState() => _CircularGradientSpinnerState();
+  State<CircularGradientSpinner> createState() =>
+      _CircularGradientSpinnerState();
 }
 
 class _CircularGradientSpinnerState extends State<CircularGradientSpinner>
@@ -55,6 +60,7 @@ class _CircularGradientSpinnerState extends State<CircularGradientSpinner>
               progressColor: widget.color,
               strokeWidth: widget.strokeWidth,
               gradientSteps: widget.gradientSteps,
+              spinnerDirection: widget.spinnerDirection,
             ),
             size: Size(
               widget.size,

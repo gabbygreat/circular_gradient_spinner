@@ -6,10 +6,10 @@ void main() {
   testWidgets(
       'CircularGradientSpinner initializes and disposes AnimationController correctly',
       (WidgetTester tester) async {
-    // Define a test key to find the GradientRoundPaint widget
+    // Define a test key to find the CircularGradientSpinner widget
     const Key testKey = Key('circular_gradient_spinner');
 
-    // Pump the GradientRoundPaint widget into the widget tester
+    // Pump the CircularGradientSpinner widget into the widget tester
     await tester.pumpWidget(const MaterialApp(
       home: Scaffold(
         body: CircularGradientSpinner(

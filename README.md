@@ -13,7 +13,7 @@ A Flutter package that provides a customizable, animated, gradient circular prog
 
 ## Getting Started
 
-To use this package, add `gradient_round_paint` as a dependency in your `pubspec.yaml` file.
+To use this package, add `circular_gradient_spinner` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:

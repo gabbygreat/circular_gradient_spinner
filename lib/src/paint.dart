@@ -2,6 +2,7 @@ import 'dart:math' show pi, cos, sin;
 
 import 'package:flutter/material.dart';
 
+import 'enum.dart';
 import 'utils.dart';
 
 extension NumToRadians on num {
@@ -19,12 +20,14 @@ class ProgressPainter extends CustomPainter {
   final double strokeWidth;
   final Color progressColor;
   final int gradientSteps;
+  final SpinnerDirection spinnerDirection;
 
   ProgressPainter({
     this.rotationAngle = 0,
     this.strokeWidth = 20,
     required this.progressColor,
     this.gradientSteps = 8,
+    required this.spinnerDirection,
   });
 
   @override
@@ -73,7 +76,11 @@ class ProgressPainter extends CustomPainter {
     // Move the canvas origin to the center
     canvas.translate(centerX, centerY);
     // Rotate the canvas
-    canvas.rotate(rotationAngle.toRadians());
+    double rotationRadians = rotationAngle.toRadians();
+    if (spinnerDirection == SpinnerDirection.antiClockwise) {
+      rotationRadians = -rotationRadians;
+    }
+    canvas.rotate(rotationRadians);
     // Move the canvas origin back
     canvas.translate(-centerX, -centerY);
 

@@ -37,6 +37,7 @@ class _PaintAppState extends State<PaintApp> {
         color: Colors.black,
         size: 200,
         strokeWidth: 30,
+        spinnerDirection: SpinnerDirection.clockwise,
       ),
     );
   }

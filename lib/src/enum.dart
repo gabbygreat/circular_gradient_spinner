@@ -1,0 +1,4 @@
+enum SpinnerDirection {
+  clockwise,
+  antiClockwise,
+}
